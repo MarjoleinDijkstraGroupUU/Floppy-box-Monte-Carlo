@@ -6,7 +6,7 @@ Floppy-box Monte Carlo simulation script for Hoomd-Blue 3. This script works for
 - hoomd-blue 3
 - numpy
 
-## How to use it
+## Usage
 
 There are three parameters you need to specify. `-t`: truncation 0-1 (if t=0, means rounded tetrahedron); `-r`: roundness 0-1; `-n`: number of particles in the unit cell.
 Of course, you also can change other parameters, like the final pressure and total MC steps.
