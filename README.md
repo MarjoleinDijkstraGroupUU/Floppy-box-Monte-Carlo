@@ -13,6 +13,3 @@ Of course, you also can change other parameters, like the final pressure and tot
 
 At least 10 (20 recommended) independent runs are needed to get the densest packing.
 
-## Todo
-
-- box_reduce updater
