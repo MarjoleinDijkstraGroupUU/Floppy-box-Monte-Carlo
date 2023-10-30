@@ -1,5 +1,5 @@
 # Floppy-box-Monte-Carlo
-Floppy-box Monte Carlo simulation script for Hoomd-Blue 3. This script works for rounded truncated tetrahedron and rounded tetrahedron.
+Floppy-box Monte Carlo simulation script for Hoomd-Blue 4. This script works for rounded truncated tetrahedron and rounded tetrahedron.
 
 ## Requires
 
