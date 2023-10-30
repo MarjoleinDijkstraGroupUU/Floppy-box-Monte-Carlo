@@ -3,7 +3,7 @@ Floppy-box Monte Carlo simulation script for Hoomd-Blue 3. This script works for
 
 ## Requires
 
-- hoomd-blue 3
+- hoomd-blue 4
 - numpy
 
 ## Usage
