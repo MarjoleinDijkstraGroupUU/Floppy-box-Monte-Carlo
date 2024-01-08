@@ -187,16 +187,16 @@ while sim.timestep <= total_steps:
 
     tune_move_size = hoomd.hpmc.tune.MoveSize.scale_solver(trigger=hoomd.trigger.Periodic(10),
                                                            moves=["a", "d"],
-                                                           target=0.3,
+                                                           target=0.25,
                                                            max_translation_move=mc.d['RTT'],
                                                            max_rotation_move=mc.a['RTT'],
-                                                           gamma=0.5)
+                                                           gamma=0.8)
     sim.operations.tuners.append(tune_move_size)
 
     tune_box_size = hoomd.hpmc.tune.BoxMCMoveSize.scale_solver(trigger=hoomd.trigger.Periodic(10),
                                                                boxmc=boxmc,
                                                                moves=["volume", "length_x", "length_y", "length_z", "shear_x", "shear_y", "shear_z"],
-                                                               target=0.3,
+                                                               target=0.20,
                                                                max_move_size=dict(volume=volume_delta, 
                                                                                   length_x=length_delta[0],
                                                                                   length_y=length_delta[1],
@@ -204,7 +204,7 @@ while sim.timestep <= total_steps:
                                                                                   shear_x=shear_delta[0],
                                                                                   shear_y=shear_delta[1],
                                                                                   shear_z=shear_delta[2]),
-                                                               gamma=0.5)
+                                                               gamma=0.8)
     sim.operations.tuners.append(tune_box_size)
 
     sim.run(1000, write_at_start=(True if sim.timestep==0 else False))
